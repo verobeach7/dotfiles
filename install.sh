@@ -13,6 +13,7 @@ ln -sfn "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
 ln -sfn "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 ln -sfn "$HOME/dotfiles/zsh/.zprofile" "$HOME/.zprofile"
 ln -sfn "$HOME/dotfiles/zsh/p10k.zsh" "$HOME/.p10k.zsh"
+ln -sfn "$HOME/dotfiles/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 ln -sFn "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
 ln -sFn "$HOME/dotfiles/tmux/tmuxinator" "$HOME/.config/tmuxinator"
 

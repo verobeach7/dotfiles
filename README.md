@@ -67,7 +67,7 @@ prefix + I
 
 ### Display
 
-Set display resolution to 2/5
+Set display resolution to 2/5 (if 5k monitor)
 
 ### Safari
 
@@ -113,3 +113,51 @@ to Korean (or any non-English layout).
 
 - Insert mode → keeps your previous input method
 - Normal mode → forces English layout
+
+### Karabiner
+
+Karabiner-Elements Configuration
+
+This repository includes a configuration for Karabiner-Elements to optimize keyboard behavior in a terminal-focused development environment, especially when using iTerm2 and tmux.
+
+#### Overview
+
+Automatic input source switching in iTerm2
+
+When specific modifier keys are pressed in iTerm2, the input source automatically switches to ABC (English). The original key event is then passed through normally.
+
+##### Ctrl + A
+
+    • Switches input source to ABC
+    • Sends Ctrl + A afterward
+    • Prevents issues when using tmux or shell prefix keys while typing in Korean
+
+##### Option key
+
+    • Switches input source to ABC
+    • Keeps Option key behavior unchanged
+    • Helps avoid accidental input source problems when using Meta shortcuts
+
+##### Key Remappings
+
+Caps Lock → F19
+• Used as a Hyper key or custom shortcut trigger
+
+Right Command → Caps Lock
+• Used as a quick language switch key
+
+#### Target Device
+
+This configuration currently applies only to a specific keyboard.
+
+Vendor ID: 13652
+Product ID: 64007
+
+If you want the same behavior on other keyboards, add their device identifiers.
+
+#### Design Goals
+
+This setup is designed for a workflow that relies heavily on terminal shortcuts.
+• Smooth tmux and shell key usage
+• Automatic input source management
+• Extensible foundation for Hyper key shortcuts
