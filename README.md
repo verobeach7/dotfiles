@@ -40,6 +40,10 @@ cd ~/dotfiles
 ./install.sh
 ```
 
+```zsh
+./macos.sh
+```
+
 ### Install plugins
 
 #### Neovim
