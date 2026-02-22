@@ -2,8 +2,7 @@
 
 ## Overview
 
-dotfiles for MacOS(Apple Silicon)
-Opinionated macOS development environment
+Opinionated macOS (Apple Silicon) development environment dotfiles.
 
 ## Auto Installation
 
@@ -36,9 +35,13 @@ cd ~/dotfiles
 
 ### Install script
 
+Creates symlinks and installs Homebrew packages, Node (nvm), Python (pyenv), Claude Code, and tmux/Neovim plugins.
+
 ```zsh
 ./install.sh
 ```
+
+Applies macOS system defaults (Finder, Dock, trackpad, keyboard settings).
 
 ```zsh
 ./macos.sh
@@ -54,38 +57,40 @@ cd ~/dotfiles
 
 #### tmux
 
-```vim
+```text
 prefix + I
 ```
 
 ## MacOS Settings
 
-### 디스플레이 설정
+> The following settings cannot be automated via scripts and must be configured manually.
 
-디스플레이 크기 조정 2/5
+### Display
+
+Set display resolution to 2/5
 
 ### Safari
 
-보기 125%
+Zoom 125%
 
 ### Chrome
 
-**보기 125%**
+Zoom 125%
 
 ### Karabiner
 
-설정 백업 복원
+Restore settings from backup
 
 ### iTerm2
 
-설정 백업 복원
+Restore settings from backup
 
 ## Checklist
 
-- [ ] tmux 설정 반영 여부 확인
-- [ ] nvim plugins 설치 확인
-- [ ] terminal alias 확인
-- [ ] terminal, iterm scroll 정상 동작 확인
+- [ ] Verify tmux config is applied
+- [ ] Verify nvim plugins are installed
+- [ ] Verify terminal aliases
+- [ ] Verify terminal and iTerm scroll works correctly
 
 ## Details
 
