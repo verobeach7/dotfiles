@@ -1,0 +1,31 @@
+# /Users/verobeach7/.config/tmuxinator/supatrade.yml
+
+name: supatrade
+root: ~/development/supa-trade
+
+windows:
+  - editor:
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - nvim .
+
+  - claude:
+      layout: even-horizontal
+      panes:
+        - claude
+        -
+
+  - servers:
+      layout: tiled
+      panes:
+        - npm run dev
+        - cd services/trading && .venv/bin/python main.py
+        - cd services/backtesting && .venv/bin/python main.py
+        -
+
+  - ops:
+      panes:
+        - git status
