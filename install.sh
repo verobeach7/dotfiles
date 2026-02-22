@@ -10,7 +10,7 @@ echo "🔗 Creating symlinks..."
 
 mkdir -p "$HOME/.config"
 ln -sfn "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
-ln -sfn "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+ln -sfn "$HOME/dotfiles/zsh/zshrc" "$HOME/.zshrc"
 ln -sfn "$HOME/dotfiles/zsh/.zprofile" "$HOME/.zprofile"
 ln -sfn "$HOME/dotfiles/zsh/p10k.zsh" "$HOME/.p10k.zsh"
 ln -sfn "$HOME/dotfiles/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
