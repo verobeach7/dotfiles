@@ -71,11 +71,11 @@ Set display resolution to 2/5
 
 ### Safari
 
-Zoom 125%
+Zoom 125% (if 5k monitor)
 
 ### Chrome
 
-Zoom 125%
+Zoom 125% (if 5k monitor)
 
 ### Karabiner
 
