@@ -29,6 +29,32 @@ fi
 brew bundle --file="$HOME/dotfiles/brew/Brewfile"
 
 # --------------------------------------------------
+# Zsh setup (Oh My Zsh + plugins + theme)
+# --------------------------------------------------
+echo "🐚 Installing Oh My Zsh..."
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+echo "⚡ Installing Powerlevel10k..."
+if [ ! -d "$HOME/powerlevel10k" ]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+fi
+
+echo "💡 Installing zsh-autosuggestions..."
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions \
+    "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+fi
+
+echo "🎨 Installing zsh-syntax-highlighting..."
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+    "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+fi
+
+# --------------------------------------------------
 # Node (nvm)
 # --------------------------------------------------
 echo "🟢 Installing nvm and Node LTS..."
