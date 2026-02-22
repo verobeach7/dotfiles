@@ -15,7 +15,7 @@ return {
     default_command = "im-select",
 
     --- ⭐ Normal 모드 들어갈 때만 전환
-    set_default_events = { "InsertLeave", "FocusGained" },
+    set_default_events = { "InsertLeave", "FocusGained", "BufEnter", "WinEnter" },
 
     -- Insert 모드에서는 입력기 변경 안 함
     set_previous_events = {},
