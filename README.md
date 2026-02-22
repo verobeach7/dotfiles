@@ -35,7 +35,7 @@ cd ~/dotfiles
 
 ### Install script
 
-Creates symlinks and installs Homebrew packages, Node (nvm), Python (pyenv), Claude Code, and tmux/Neovim plugins.
+Creates symlinks and installs Homebrew packages, Oh My Zsh, Powerlevel10k, zsh plugins (zsh-autosuggestions, zsh-syntax-highlighting), Node (nvm), Python (pyenv), Claude Code, and tmux/Neovim plugins.
 
 ```zsh
 ./install.sh
@@ -48,6 +48,8 @@ Applies macOS system defaults (Finder, Dock, trackpad, keyboard settings).
 ```
 
 ### Install plugins
+
+> Automatically installed by `install.sh`.
 
 #### Neovim
 
