@@ -123,6 +123,7 @@ Zoom 125% (if 5k monitor)
 - [ ] Verify nvim plugins are installed
 - [ ] Verify terminal aliases
 - [ ] Verify terminal and iTerm scroll works correctly
+- [ ] Apps that failed to install via mas should be installed manually from the App Store
 
 ## Details
 
