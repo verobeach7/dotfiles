@@ -122,7 +122,7 @@ fi
 
 # install tmux plugins automatically
 tmux start-server
-tmux new-session -d -s __temp
+tmux has-session -t __temp 2>/dev/null || tmux new-session -d -s __temp
 tmux source-file "$HOME/.tmux.conf"
 "$HOME/.tmux/plugins/tpm/bin/install_plugins"
 tmux kill-session -t __temp
