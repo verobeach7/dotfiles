@@ -13,7 +13,7 @@ mkdir -p "$HOME/.config/karabiner"
 mkdir -p "$HOME/.config/nvim"
 mkdir -p "$HOME/.config/tmuxinator"
 
-ln -sfn "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
+ln -sfn "$HOME/dotfiles/tmux/tmux.conf" "$HOME/.tmux.conf"
 ln -sfn "$HOME/dotfiles/zsh/zshrc" "$HOME/.zshrc"
 ln -sfn "$HOME/dotfiles/zsh/.zprofile" "$HOME/.zprofile"
 ln -sfn "$HOME/dotfiles/zsh/p10k.zsh" "$HOME/.p10k.zsh"
