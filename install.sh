@@ -27,15 +27,24 @@ ln -sFn "$HOME/dotfiles/tmux/tmuxinator" "$HOME/.config/tmuxinator"
 # --------------------------------------------------
 echo "📦 Installing Brew packages..."
 
+set +e
 brew bundle --file="$HOME/dotfiles/brew/Brewfile" --verbose
-EXIT_CODE=$?
-
-if [ $EXIT_CODE -ne 0 ]; then
-  echo "⚠️ brew bundle finished with errors (code $EXIT_CODE)"
-  echo "➡️ Continuing setup..."
-fi
+BREW_EXIT_CODE=$?
+set -e
 
 export PATH="/opt/homebrew/bin:$PATH"
+
+if [ $BREW_EXIT_CODE -ne 0 ]; then
+  echo "⚠️ brew bundle finished with errors — checking mas apps..."
+  while IFS= read -r line; do
+    app_name=$(echo "$line" | grep -o '"[^"]*"' | head -1 | tr -d '"')
+    app_id=$(echo "$line" | grep -o 'id: [0-9]*' | awk '{print $2}')
+    if [ -n "$app_id" ] && ! mas list | grep -q "^$app_id"; then
+      echo "  ❌ Not installed: $app_name (id: $app_id)"
+    fi
+  done < <(grep "^mas" "$HOME/dotfiles/brew/Brewfile")
+  echo "➡️ Continuing setup..."
+fi
 
 # --------------------------------------------------
 # Zsh setup (Oh My Zsh + plugins + theme)
