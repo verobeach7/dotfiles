@@ -107,7 +107,9 @@ curl -fsSL https://claude.ai/install.sh | bash
 # LazyVim plugins sync
 # --------------------------------------------------
 echo "🧠 Installing Neovim plugins (LazyVim)..."
+set +e
 nvim --headless -c 'autocmd User LazySync qall' -c 'Lazy! sync'
+set -e
 
 # --------------------------------------------------
 # tmux plugin manager (TPM)
