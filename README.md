@@ -6,6 +6,11 @@ Opinionated macOS (Apple Silicon) development environment dotfiles.
 
 You must sign in to the Apple App Store before installation.
 
+Prerequisites
+
+1. Download 1Password from the official website.
+2. Install the application before proceeding.
+
 ## Auto Installation
 
 ```zsh
@@ -65,6 +70,38 @@ Applies macOS system defaults (Finder, Dock, trackpad, keyboard settings).
 prefix + I
 ```
 
+## Post-installation Steps
+
+1. Restart the terminal
+
+2. Launch Karabiner
+
+3. Activate the Alfred Powerpack license
+
+4. Organize shortcuts
+
+- **Spotlight:** `Ctrl + Space`
+- **Alfred:** `Cmd + Space`
+- **GPT:** `Option + Space`
+
+1. Import **iTerm Settings and Data**
+
+   iCloud → Settings → iTerm2 → iTerm2State.itermexport
+
+2. Import **Terminal Profiles**
+
+   iCloud → Settings → Terminal → Clear Dark.terminal
+
+3. Set the imported Terminal profile as the default
+
+4. Configure **BetterTouchTool**
+
+   BTT → Sync → iCloud Drive → Enable Sync
+
+5. Install **VS Code** and sign in
+
+   Extensions will install automatically after login
+
 ## MacOS Settings
 
 > The following settings cannot be automated via scripts and must be configured manually.
@@ -80,14 +117,6 @@ Zoom 125% (if 5k monitor)
 ### Chrome
 
 Zoom 125% (if 5k monitor)
-
-### Karabiner
-
-Restore settings from backup
-
-### iTerm2
-
-Restore settings from backup
 
 ## Checklist
 
@@ -124,7 +153,7 @@ Karabiner-Elements Configuration
 
 This repository includes a configuration for Karabiner-Elements to optimize keyboard behavior in a terminal-focused development environment, especially when using iTerm2 and tmux.
 
-#### Overview
+#### How it works
 
 Automatic input source switching in iTerm2
 
@@ -132,15 +161,15 @@ When specific modifier keys are pressed in iTerm2, the input source automaticall
 
 ##### Ctrl + A
 
-    • Switches input source to ABC
-    • Sends Ctrl + A afterward
-    • Prevents issues when using tmux or shell prefix keys while typing in Korean
+• Switches input source to ABC
+• Sends Ctrl + A afterward
+• Prevents issues when using tmux or shell prefix keys while typing in Korean
 
 ##### Option key
 
-    • Switches input source to ABC
-    • Keeps Option key behavior unchanged
-    • Helps avoid accidental input source problems when using Meta shortcuts
+• Switches input source to ABC
+• Keeps Option key behavior unchanged
+• Helps avoid accidental input source problems when using Meta shortcuts
 
 ##### Key Remappings
 
