@@ -30,7 +30,11 @@ if ! command -v brew >/dev/null 2>&1; then
   echo "  /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
   exit 1
 fi
-brew bundle --file="$HOME/dotfiles/brew/Brewfile"
+
+if ! brew bundle --file="$HOME/dotfiles/brew/Brewfile"; then
+  echo "⚠️ Brew bundle failed"
+  brew bundle check --file="$HOME/dotfiles/brew/Brewfile"
+fi
 
 # --------------------------------------------------
 # Zsh setup (Oh My Zsh + plugins + theme)

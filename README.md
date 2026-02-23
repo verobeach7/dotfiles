@@ -4,6 +4,8 @@
 
 Opinionated macOS (Apple Silicon) development environment dotfiles.
 
+You must sign in to the Apple App Store before installation.
+
 ## Auto Installation
 
 ```zsh
