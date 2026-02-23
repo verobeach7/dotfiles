@@ -4,12 +4,11 @@
 
 Opinionated macOS (Apple Silicon) development environment dotfiles.
 
-You must sign in to the Apple App Store before installation.
+### Prerequisites
 
-Prerequisites
-
-1. Download 1Password from the official website.
-2. Install the application before proceeding.
+1. You must sign in to the Apple App Store before installation.
+2. Download 1Password from the official website.
+3. Install the application before proceeding.
 
 ## Auto Installation
 
