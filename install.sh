@@ -26,9 +26,10 @@ ln -sFn "$HOME/dotfiles/tmux/tmuxinator" "$HOME/.config/tmuxinator"
 # --------------------------------------------------
 echo "🍺 Installing Brew packages..."
 if ! command -v brew >/dev/null 2>&1; then
-  echo "❌ Homebrew not found. Install it first:"
-  echo "  /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
-  exit 1
+  echo "🍺 Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "✅ Homebrew already installed, skipping"
 fi
 
 if ! brew bundle --file="$HOME/dotfiles/brew/Brewfile"; then
