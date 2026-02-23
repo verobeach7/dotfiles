@@ -27,7 +27,7 @@ ln -sFn "$HOME/dotfiles/tmux/tmuxinator" "$HOME/.config/tmuxinator"
 # --------------------------------------------------
 echo "📦 Installing Brew packages..."
 
-brew bundle --file="$HOME/dotfiles/brew/Brewfile"
+brew bundle --file="$HOME/dotfiles/brew/Brewfile" --verbose
 EXIT_CODE=$?
 
 if [ $EXIT_CODE -ne 0 ]; then
