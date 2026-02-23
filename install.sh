@@ -25,17 +25,14 @@ ln -sFn "$HOME/dotfiles/tmux/tmuxinator" "$HOME/.config/tmuxinator"
 # --------------------------------------------------
 # Homebrew packages
 # --------------------------------------------------
-echo "🍺 Installing Brew packages..."
-if ! command -v brew >/dev/null 2>&1; then
-  echo "🍺 Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "✅ Homebrew already installed, skipping"
-fi
+echo "📦 Installing Brew packages..."
 
-if ! brew bundle --file="$HOME/dotfiles/brew/Brewfile"; then
-  echo "⚠️ Brew bundle failed"
-  brew bundle check --file="$HOME/dotfiles/brew/Brewfile"
+brew bundle --file="$HOME/dotfiles/brew/Brewfile"
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo "⚠️ brew bundle finished with errors (code $EXIT_CODE)"
+  echo "➡️ Continuing setup..."
 fi
 
 export PATH="/opt/homebrew/bin:$PATH"
