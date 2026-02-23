@@ -9,6 +9,10 @@ echo "🚀 Starting development environment setup..."
 echo "🔗 Creating symlinks..."
 
 mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.config/karabiner"
+mkdir -p "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/tmuxinator"
+
 ln -sfn "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
 ln -sfn "$HOME/dotfiles/zsh/zshrc" "$HOME/.zshrc"
 ln -sfn "$HOME/dotfiles/zsh/.zprofile" "$HOME/.zprofile"
