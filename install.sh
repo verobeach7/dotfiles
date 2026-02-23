@@ -38,6 +38,8 @@ if ! brew bundle --file="$HOME/dotfiles/brew/Brewfile"; then
   brew bundle check --file="$HOME/dotfiles/brew/Brewfile"
 fi
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 # --------------------------------------------------
 # Zsh setup (Oh My Zsh + plugins + theme)
 # --------------------------------------------------
@@ -90,8 +92,6 @@ set -e
 # --------------------------------------------------
 echo "🐍 Installing Python via pyenv..."
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv >/dev/null; then
   eval "$(pyenv init -)"
   pyenv install -s 3.13
