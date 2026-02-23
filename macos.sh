@@ -10,6 +10,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 # 트랙패드 커서 이동 속도 증가
 defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2.5
+# 트랙패드 세 손가락 드래그
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
 # Finder
 # Finder 숨김 파일 표시
