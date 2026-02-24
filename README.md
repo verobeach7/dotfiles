@@ -103,6 +103,16 @@ prefix + I
 
    Extensions will install automatically after login
 
+1. GitHub login
+
+```zsh
+gh auth login
+```
+
+1. VSCode Installation and GitHub login
+
+Turn on Settings Sync
+
 ## MacOS Settings
 
 > The following settings cannot be automated via scripts and must be configured manually.
