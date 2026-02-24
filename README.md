@@ -73,31 +73,33 @@ prefix + I
 
 1. Restart the terminal
 
-2. Launch Karabiner
+1. Launch Karabiner
 
-3. Activate the Alfred Powerpack license
+1. Activate the Alfred Powerpack license, Add preferences with synology nas sync drive
 
-4. Organize shortcuts
-
-- **Spotlight:** `Ctrl + Space`
-- **Alfred:** `Cmd + Space`
-- **GPT:** `Option + Space`
+1. Organize shortcuts
+   **System Settings** (Keyboard - Keyboard shortcuts) - Select the previous input source: Uncheck - Select next source in Input menu: F19
+   **Spotlight:** `Ctrl + Space`
+   **Alfred:** `Cmd + Space`
+   **GPT:** `Option + Space`
 
 1. Import **iTerm Settings and Data**
 
    iCloud → Settings → iTerm2 → iTerm2State.itermexport
 
-2. Import **Terminal Profiles**
+1. Import **Terminal Profiles**
 
    iCloud → Settings → Terminal → Clear Dark.terminal
 
-3. Set the imported Terminal profile as the default
+1. Set the imported Terminal profile as the default
 
-4. Configure **BetterTouchTool**
+1. Configure **BetterTouchTool**
+
+   Add license: Open file in 1Password
 
    BTT → Sync → iCloud Drive → Enable Sync
 
-5. Install **VS Code** and sign in
+1. Install **VS Code** and sign in
 
    Extensions will install automatically after login
 
